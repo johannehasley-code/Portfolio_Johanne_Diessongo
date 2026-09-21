@@ -1,30 +1,40 @@
-import { useEffect, useRef, useState } from "react";
-import { projects } from "../data/portfolio";
-import { IconTrendingUp, IconShield, IconUsers, IconBook, IconArrowRight } from "./Icons";
+import { useRef, useState, useEffect } from "react";
+import { projects, projectCategories } from "../data/portfolio";
+import { IconTrendingUp, IconShield, IconUsers, IconBook, IconCode, IconHeart, IconArrowRight, IconCamera, IconExternalLink } from "./Icons";
+import Modal from "./Modal";
 
 function ProjectIcon({ type, size = 28 }) {
   if (type === "finance") return <IconTrendingUp size={size} color="var(--sage-dark)" />;
   if (type === "security") return <IconShield size={size} color="#3a6a8a" />;
   if (type === "education") return <IconUsers size={size} color="#9a7a30" />;
+  if (type === "tech") return <IconCode size={size} color="#3a6a8a" />;
+  if (type === "community") return <IconHeart size={size} color="#b05a6a" />;
   return <IconBook size={size} color="#7a6ab8" />;
 }
 
-function ProjectCard({ project, index }) {
+function ProjectCard({ project, index, onOpen }) {
   const [hovered, setHovered] = useState(false);
+  const clickable = Boolean(project.demo);
   return (
     <div
       className="project-card reveal"
-      style={{ animationDelay: `${index * 100}ms`, background: hovered ? "white" : project.color }}
+      style={{ animationDelay: `${index * 100}ms`, background: hovered ? "white" : project.color, cursor: clickable ? "pointer" : "default" }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={() => clickable && onOpen(project)}
+      role={clickable ? "button" : undefined}
+      tabIndex={clickable ? 0 : undefined}
+      onKeyDown={(e) => { if (clickable && (e.key === "Enter" || e.key === " ")) onOpen(project); }}
     >
       <div className="project-icon-wrap">
         <div className="project-icon-circle" style={{ opacity: hovered ? 1 : 0.85 }}>
           <ProjectIcon type={project.type} />
         </div>
-        <div className="project-arrow" style={{ opacity: hovered ? 1 : 0, transform: hovered ? "translate(0,0)" : "translate(-6px, 6px)" }}>
-          <IconArrowRight size={20} color="var(--sage-dark)" />
-        </div>
+        {clickable && (
+          <div className="project-arrow" style={{ opacity: hovered ? 1 : 0, transform: hovered ? "translate(0,0)" : "translate(-6px, 6px)" }}>
+            <IconArrowRight size={20} color="var(--sage-dark)" />
+          </div>
+        )}
       </div>
       <h3 className="project-title">{project.title}</h3>
       <p className="project-desc">{project.desc}</p>
@@ -36,8 +46,59 @@ function ProjectCard({ project, index }) {
   );
 }
 
+function ProjectModal({ project, onClose }) {
+  if (!project) return null;
+  const { demo } = project;
+
+  return (
+    <Modal title={project.title} onClose={onClose}>
+      <p className="project-modal-desc">{project.desc}</p>
+
+      {demo.kind === "photos" && (
+        demo.photos && demo.photos.length > 0 ? (
+          <div className="project-modal-photos">
+            {demo.photos.map((src) => <img key={src} src={src} alt={project.title} />)}
+          </div>
+        ) : (
+          <div className="modal-placeholder">
+            <IconCamera size={28} color="var(--slate-light)" />
+            <p>Photos à venir</p>
+          </div>
+        )
+      )}
+
+      {demo.kind === "video" && (
+        demo.url ? (
+          <div className="project-modal-video">
+            <iframe src={demo.url} title={`Démo — ${project.title}`} allowFullScreen />
+          </div>
+        ) : (
+          <div className="modal-placeholder">
+            <IconCamera size={28} color="var(--slate-light)" />
+            <p>Vidéo de démonstration à venir</p>
+          </div>
+        )
+      )}
+
+      {demo.kind === "link" && (
+        demo.url ? (
+          <a className="project-modal-link" href={demo.url} target="_blank" rel="noreferrer">
+            Voir la démo <IconExternalLink size={16} />
+          </a>
+        ) : (
+          <div className="modal-placeholder">
+            <IconExternalLink size={28} color="var(--slate-light)" />
+            <p>Lien de démo à venir</p>
+          </div>
+        )
+      )}
+    </Modal>
+  );
+}
+
 export default function Projects() {
   const sectionRef = useRef(null);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -61,7 +122,10 @@ export default function Projects() {
       <style>{`
         .projects { padding: 120px 80px; background: var(--warm-white); position: relative; overflow: hidden; }
         .projects::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--sand), transparent); }
-        .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 16px; }
+        .projects-category { margin-top: 56px; }
+        .projects-category:first-of-type { margin-top: 16px; }
+        .projects-category-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--slate); margin-bottom: 20px; }
+        .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
         .project-card { border-radius: var(--radius-lg); padding: 32px; border: 1px solid rgba(232, 224, 208, 0.6); cursor: pointer; position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
         .project-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lift); border-color: var(--sage-light); }
         .project-icon-wrap { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
@@ -75,6 +139,13 @@ export default function Projects() {
         .project-card:hover .project-tag { background: white; border-color: var(--sage-light); }
         .project-hover-line { position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--sage), var(--gold)); transform-origin: left; transition: transform 0.4s ease; }
         @media (max-width: 768px) { .projects { padding: 80px 32px; } .projects-grid { grid-template-columns: 1fr; } }
+
+        .project-modal-desc { font-size: 0.92rem; color: var(--slate-light); line-height: 1.7; margin-bottom: 24px; }
+        .project-modal-photos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .project-modal-photos img { width: 100%; border-radius: var(--radius-md); object-fit: cover; }
+        .project-modal-video { position: relative; padding-top: 56.25%; border-radius: var(--radius-md); overflow: hidden; }
+        .project-modal-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+        .project-modal-link { display: inline-flex; align-items: center; gap: 8px; background: var(--sage-dark); color: white; padding: 12px 24px; border-radius: 50px; font-weight: 500; text-decoration: none; }
       `}</style>
 
       <section className="projects" id="projects" ref={sectionRef}>
@@ -82,10 +153,21 @@ export default function Projects() {
           <div className="section-label">Portfolio</div>
           <h2 className="section-title">Mes <em>projets</em></h2>
         </div>
-        <div className="projects-grid">
-          {projects.map((p, i) => <ProjectCard key={i} project={p} index={i} />)}
-        </div>
+        {projectCategories.map((cat) => {
+          const items = projects.filter((p) => p.category === cat.key);
+          if (items.length === 0) return null;
+          return (
+            <div className="projects-category" key={cat.key}>
+              <h3 className="projects-category-title reveal">{cat.label}</h3>
+              <div className="projects-grid">
+                {items.map((p, i) => <ProjectCard key={p.title} project={p} index={i} onOpen={setSelectedProject} />)}
+              </div>
+            </div>
+          );
+        })}
       </section>
+
+      <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
     </>
   );
 }
