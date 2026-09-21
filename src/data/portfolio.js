@@ -67,26 +67,34 @@ export const experiences = [
 ];
 
 export const projects = [
-  {
-    title: "InnoFaso NC",
-    desc: "Application web de gestion des non-conformités développée en collaboration avec Innofaso, entreprise agro-industrielle burkinabè. Analyse des causes par la méthode des 5 Pourquoi assistée par IA, gestion des accès par rôle.",
-    tags: ["React", "Node.js", "MySQL", "IA"],
-    color: "#e8f0f4",
-    type: "tech",
-  },
+  // Projets communautaires
   {
     title: "Give Back Activities – CNTS",
     desc: "Projet communautaire du Mastercard Foundation Scholars Program : conception d'un prototype d'application web pour le Centre National de Transfusion Sanguine (CNTS) de Ouagadougou, en équipe de huit boursiers.",
     tags: ["React", "Santé publique", "Bénévolat"],
     color: "#f4e8ea",
     type: "community",
+    category: "communautaire",
+    demo: { kind: "video", url: "" },
   },
   {
-    title: "Laafi Épargne",
+    title: "Aide aux femmes déplacées internes",
+    desc: "Projet communautaire de soutien aux femmes déplacées internes au Burkina Faso. Fiche en cours de complément.",
+    tags: ["Communautaire", "Impact social"],
+    color: "#f4ece8",
+    type: "community",
+    category: "communautaire",
+    demo: { kind: "photos", photos: [] },
+  },
+  // Projets personnels
+  {
+    title: "Investpredict",
     desc: "Application d'épargne inclusive pour agriculteurs et éleveurs du Burkina Faso : sécurisation et croissance progressive de l'épargne, assistance vocale en langues locales.",
     tags: ["React", "IA", "Finance inclusive", "BRVM"],
     color: "#e8f4f0",
     type: "finance",
+    category: "personnel",
+    demo: { kind: "video", url: "" },
   },
   {
     title: "App de Gestion de Tokens",
@@ -94,13 +102,26 @@ export const projects = [
     tags: ["FinTech", "Sécurité", "Banking"],
     color: "#eef0f8",
     type: "security",
+    category: "personnel",
+    demo: { kind: "link", url: "" },
   },
   {
     title: "Centralisation de Bourses",
     desc: "Application centralisant les opportunités de bourses d'études pour étudiants africains.",
-    tags: ["React", "UX", "Social"],
+    tags: ["React", "UX", "Social", "Projet de groupe (5)"],
     color: "#f4f0e8",
     type: "education",
+    category: "personnel",
+    demo: { kind: "link", url: "" },
+  },
+  // Projets académiques
+  {
+    title: "InnoFaso NC",
+    desc: "Application web de gestion des non-conformités développée en collaboration avec Innofaso, entreprise agro-industrielle burkinabè. Analyse des causes par la méthode des 5 Pourquoi assistée par IA, gestion des accès par rôle.",
+    tags: ["React", "Node.js", "MySQL", "IA"],
+    color: "#e8f0f4",
+    type: "tech",
+    category: "academique",
   },
   {
     title: "Plateforme de Cours Étudiants",
@@ -108,7 +129,14 @@ export const projects = [
     tags: ["React", "Education", "MVP"],
     color: "#f0e8f4",
     type: "book",
+    category: "academique",
   },
+];
+
+export const projectCategories = [
+  { key: "communautaire", label: "Projets communautaires" },
+  { key: "personnel", label: "Projets personnels" },
+  { key: "academique", label: "Projets académiques" },
 ];
 
 export const education = [
