@@ -42,6 +42,7 @@ export const experiences = [
       "Analyse par ratios de rentabilité, de structure et de trésorerie",
       "Contribution au plan stratégique d'une société de transport public",
     ],
+    extracts: { photos: [] },
   },
   {
     role: "Stagiaire, Département Digital",
@@ -53,6 +54,7 @@ export const experiences = [
       "Gestion des incidents de transfert Western Union (erreurs réseau, blocages, retards)",
       "Conception d'une application de gestion de tokens uniques pour sécuriser les transferts d'argent",
     ],
+    extracts: { photos: [] },
   },
   {
     role: "Membre Active",

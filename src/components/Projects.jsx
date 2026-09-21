@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { projects, projectCategories } from "../data/portfolio";
 import { IconTrendingUp, IconShield, IconUsers, IconBook, IconCode, IconHeart, IconArrowRight, IconCamera, IconExternalLink } from "./Icons";
+import Modal from "./Modal";
 
 function ProjectIcon({ type, size = 28 }) {
   if (type === "finance") return <IconTrendingUp size={size} color="var(--sage-dark)" />;
@@ -46,62 +47,52 @@ function ProjectCard({ project, index, onOpen }) {
 }
 
 function ProjectModal({ project, onClose }) {
-  useEffect(() => {
-    const onKey = (e) => { if (e.key === "Escape") onClose(); };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [onClose]);
-
   if (!project) return null;
   const { demo } = project;
 
   return (
-    <div className="project-modal-backdrop" onClick={onClose}>
-      <div className="project-modal" onClick={(e) => e.stopPropagation()}>
-        <button className="project-modal-close" onClick={onClose} aria-label="Fermer">×</button>
-        <h3 className="project-modal-title">{project.title}</h3>
-        <p className="project-modal-desc">{project.desc}</p>
+    <Modal title={project.title} onClose={onClose}>
+      <p className="project-modal-desc">{project.desc}</p>
 
-        {demo.kind === "photos" && (
-          demo.photos && demo.photos.length > 0 ? (
-            <div className="project-modal-photos">
-              {demo.photos.map((src) => <img key={src} src={src} alt={project.title} />)}
-            </div>
-          ) : (
-            <div className="project-modal-placeholder">
-              <IconCamera size={28} color="var(--slate-light)" />
-              <p>Photos à venir</p>
-            </div>
-          )
-        )}
+      {demo.kind === "photos" && (
+        demo.photos && demo.photos.length > 0 ? (
+          <div className="project-modal-photos">
+            {demo.photos.map((src) => <img key={src} src={src} alt={project.title} />)}
+          </div>
+        ) : (
+          <div className="modal-placeholder">
+            <IconCamera size={28} color="var(--slate-light)" />
+            <p>Photos à venir</p>
+          </div>
+        )
+      )}
 
-        {demo.kind === "video" && (
-          demo.url ? (
-            <div className="project-modal-video">
-              <iframe src={demo.url} title={`Démo — ${project.title}`} allowFullScreen />
-            </div>
-          ) : (
-            <div className="project-modal-placeholder">
-              <IconCamera size={28} color="var(--slate-light)" />
-              <p>Vidéo de démonstration à venir</p>
-            </div>
-          )
-        )}
+      {demo.kind === "video" && (
+        demo.url ? (
+          <div className="project-modal-video">
+            <iframe src={demo.url} title={`Démo — ${project.title}`} allowFullScreen />
+          </div>
+        ) : (
+          <div className="modal-placeholder">
+            <IconCamera size={28} color="var(--slate-light)" />
+            <p>Vidéo de démonstration à venir</p>
+          </div>
+        )
+      )}
 
-        {demo.kind === "link" && (
-          demo.url ? (
-            <a className="project-modal-link" href={demo.url} target="_blank" rel="noreferrer">
-              Voir la démo <IconExternalLink size={16} />
-            </a>
-          ) : (
-            <div className="project-modal-placeholder">
-              <IconExternalLink size={28} color="var(--slate-light)" />
-              <p>Lien de démo à venir</p>
-            </div>
-          )
-        )}
-      </div>
-    </div>
+      {demo.kind === "link" && (
+        demo.url ? (
+          <a className="project-modal-link" href={demo.url} target="_blank" rel="noreferrer">
+            Voir la démo <IconExternalLink size={16} />
+          </a>
+        ) : (
+          <div className="modal-placeholder">
+            <IconExternalLink size={28} color="var(--slate-light)" />
+            <p>Lien de démo à venir</p>
+          </div>
+        )
+      )}
+    </Modal>
   );
 }
 
@@ -149,18 +140,12 @@ export default function Projects() {
         .project-hover-line { position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--sage), var(--gold)); transform-origin: left; transition: transform 0.4s ease; }
         @media (max-width: 768px) { .projects { padding: 80px 32px; } .projects-grid { grid-template-columns: 1fr; } }
 
-        .project-modal-backdrop { position: fixed; inset: 0; background: rgba(58,63,74,0.55); display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 24px; }
-        .project-modal { background: var(--warm-white); border-radius: var(--radius-lg); padding: 40px; max-width: 640px; width: 100%; max-height: 85vh; overflow-y: auto; position: relative; }
-        .project-modal-close { position: absolute; top: 16px; right: 20px; background: none; border: none; font-size: 1.8rem; line-height: 1; color: var(--slate-light); cursor: pointer; }
-        .project-modal-close:hover { color: var(--slate); }
-        .project-modal-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 600; color: var(--slate); margin-bottom: 12px; }
         .project-modal-desc { font-size: 0.92rem; color: var(--slate-light); line-height: 1.7; margin-bottom: 24px; }
         .project-modal-photos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
         .project-modal-photos img { width: 100%; border-radius: var(--radius-md); object-fit: cover; }
         .project-modal-video { position: relative; padding-top: 56.25%; border-radius: var(--radius-md); overflow: hidden; }
         .project-modal-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
         .project-modal-link { display: inline-flex; align-items: center; gap: 8px; background: var(--sage-dark); color: white; padding: 12px 24px; border-radius: 50px; font-weight: 500; text-decoration: none; }
-        .project-modal-placeholder { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 40px 20px; background: rgba(58,63,74,0.04); border-radius: var(--radius-md); color: var(--slate-light); font-size: 0.9rem; }
       `}</style>
 
       <section className="projects" id="projects" ref={sectionRef}>
