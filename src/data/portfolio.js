@@ -2,19 +2,19 @@ export const profile = {
   name: "Johanne Hasley Diessongo",
   title: "Ingénieure Généraliste · FinTech & Finance de Marchés",
   email: "johannehasley.diessongo@gmail.com",
-  phone: "+226 61029393",
+  phone: "+212 618448926",
   linkedin: "https://www.linkedin.com/in/johannehasleydiessongo",
   location: "Ouagadougou, Burkina Faso",
-  summary: "Étudiante en 3e année de Bachelor en ingénierie généraliste à l'École Centrale Casablanca, en mobilité académique au Burkina Faso. Je construis des ponts entre la technologie et la finance de marchés, avec un intérêt particulier pour les marchés financiers ouest-africains (BRVM/UEMOA).",
-  currentFocus: "En stage chez SECCAPI (modélisation financière) · Fondatrice de Laafi Épargne",
+  summary: "Étudiante en 4e année en ingénierie généraliste à l'École Centrale Casablanca, en mobilité académique au Burkina Faso. Je construis des ponts entre la technologie et la finance de marchés, avec un intérêt particulier pour les marchés financiers ouest-africains (BRVM/UEMOA).",
+  currentFocus: "Fondatrice de Laafi Épargne",
 };
 
 export const skills = {
   finance: [
-    { name: "Modélisation financière", context: "Modèle prévisionnel 5 ans (SECCAPI)" },
+    { name: "Diagnostic financier", context: "Analyse sur 5 exercices, normes SYSCOHADA" },
     { name: "Forecasting", context: "Certification edX, 2024" },
     { name: "Analyse de données", context: "Excel avancé + Python" },
-    { name: "Gestion de risques", context: "Analyse de ratios sur 6 exercices" },
+    { name: "Analyse par ratios", context: "Rentabilité, structure, trésorerie" },
     { name: "Analyse de marché", context: "Focus BRVM/UEMOA" },
   ],
   tech: [
@@ -33,14 +33,14 @@ export const skills = {
 
 export const experiences = [
   {
-    role: "Stagiaire, Modélisation financière et stratégie",
+    role: "Stagiaire, Finance et stratégie",
     company: "SECCAPI (cabinet d'expertise comptable)",
     period: "Juil. – Août 2026",
     type: "finance",
     tasks: [
-      "Analyse financière par ratios sur six exercices comptables",
-      "Construction d'un modèle prévisionnel 2026–2030 pour une société de transport public",
-      "Production de livrables structurés pour la direction générale",
+      "Diagnostic financier d'une société de distribution pharmaceutique sur cinq exercices, à partir d'états financiers au format SYSCOHADA",
+      "Analyse par ratios de rentabilité, de structure et de trésorerie",
+      "Contribution au plan stratégique d'une société de transport public",
     ],
   },
   {
@@ -67,6 +67,20 @@ export const experiences = [
 ];
 
 export const projects = [
+  {
+    title: "InnoFaso NC",
+    desc: "Application web de gestion des non-conformités développée en collaboration avec Innofaso, entreprise agro-industrielle burkinabè. Analyse des causes par la méthode des 5 Pourquoi assistée par IA, gestion des accès par rôle.",
+    tags: ["React", "Node.js", "MySQL", "IA"],
+    color: "#e8f0f4",
+    type: "tech",
+  },
+  {
+    title: "Give Back Activities – CNTS",
+    desc: "Projet communautaire du Mastercard Foundation Scholars Program : conception d'un prototype d'application web pour le Centre National de Transfusion Sanguine (CNTS) de Ouagadougou, en équipe de huit boursiers.",
+    tags: ["React", "Santé publique", "Bénévolat"],
+    color: "#f4e8ea",
+    type: "community",
+  },
   {
     title: "Laafi Épargne",
     desc: "Application d'épargne inclusive pour agriculteurs et éleveurs du Burkina Faso : sécurisation et croissance progressive de l'épargne, assistance vocale en langues locales.",

@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { projects } from "../data/portfolio";
-import { IconTrendingUp, IconShield, IconUsers, IconBook, IconArrowRight } from "./Icons";
+import { IconTrendingUp, IconShield, IconUsers, IconBook, IconCode, IconHeart, IconArrowRight } from "./Icons";
 
 function ProjectIcon({ type, size = 28 }) {
   if (type === "finance") return <IconTrendingUp size={size} color="var(--sage-dark)" />;
   if (type === "security") return <IconShield size={size} color="#3a6a8a" />;
   if (type === "education") return <IconUsers size={size} color="#9a7a30" />;
+  if (type === "tech") return <IconCode size={size} color="#3a6a8a" />;
+  if (type === "community") return <IconHeart size={size} color="#b05a6a" />;
   return <IconBook size={size} color="#7a6ab8" />;
 }
 
