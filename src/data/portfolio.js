@@ -124,6 +124,7 @@ export const projects = [
     color: "#e8f0f4",
     type: "tech",
     category: "academique",
+    demo: { kind: "link", url: "" },
   },
   {
     title: "Plateforme de Cours Étudiants",
@@ -132,6 +133,25 @@ export const projects = [
     color: "#f0e8f4",
     type: "book",
     category: "academique",
+    demo: { kind: "link", url: "" },
+  },
+  {
+    title: "AES Connect",
+    desc: "Projet académique. Fiche en cours de complément.",
+    tags: ["Académique"],
+    color: "#f0f4e8",
+    type: "tech",
+    category: "academique",
+    demo: { kind: "link", url: "" },
+  },
+  {
+    title: "MathBot AI",
+    desc: "Projet académique. Fiche en cours de complément.",
+    tags: ["IA", "Académique"],
+    color: "#e8eef4",
+    type: "tech",
+    category: "academique",
+    demo: { kind: "link", url: "" },
   },
 ];
 
