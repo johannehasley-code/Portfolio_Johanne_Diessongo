@@ -77,7 +77,7 @@ export const projects = [
     color: "#f4e8ea",
     type: "community",
     category: "communautaire",
-    demo: { kind: "link", url: "", label: "Voir l'application" },
+    demo: { kind: "link", url: "https://cnts-registration.netlify.app", label: "Voir l'application" },
   },
   {
     title: "Aide aux femmes déplacées internes",
@@ -96,7 +96,7 @@ export const projects = [
     color: "#e8f4f0",
     type: "finance",
     category: "personnel",
-    demo: { kind: "link", url: "", label: "Voir l'application" },
+    demo: { kind: "link", url: "https://investpredict-lime.vercel.app", label: "Voir l'application" },
   },
   {
     title: "App de Gestion de Tokens",
@@ -108,13 +108,13 @@ export const projects = [
     demo: { kind: "link", url: "", label: "Voir l'application" },
   },
   {
-    title: "Centralisation de Bourses",
+    title: "ScholarHub",
     desc: "Application centralisant les opportunités de bourses d'études pour étudiants africains.",
     tags: ["React", "UX", "Social", "Projet de groupe (5)"],
     color: "#f4f0e8",
     type: "education",
     category: "personnel",
-    demo: { kind: "link", url: "" },
+    demo: { kind: "link", url: "https://scholarhubweb.netlify.app", label: "Voir l'application" },
   },
   // Projets académiques
   {
@@ -124,7 +124,7 @@ export const projects = [
     color: "#e8f0f4",
     type: "tech",
     category: "academique",
-    demo: { kind: "link", url: "" },
+    demo: { kind: "link", url: "https://innofasonc.netlify.app/", label: "Voir l'application" },
   },
   {
     title: "AES Connect",
@@ -142,7 +142,7 @@ export const projects = [
     color: "#e8eef4",
     type: "tech",
     category: "academique",
-    demo: { kind: "link", url: "" },
+    demo: { kind: "link", url: "https://mathbot-frontend.vercel.app", label: "Voir l'application" },
   },
 ];
 
