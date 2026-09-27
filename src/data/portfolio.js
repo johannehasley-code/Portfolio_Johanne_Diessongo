@@ -80,13 +80,13 @@ export const projects = [
     demo: { kind: "link", url: "https://cnts-registration.netlify.app", label: "Voir l'application" },
   },
   {
-    title: "Aide aux femmes déplacées internes",
-    desc: "Projet communautaire de soutien aux femmes déplacées internes au Burkina Faso. Fiche en cours de complément.",
-    tags: ["Communautaire", "Impact social"],
+    title: "Give Back Activities – Femmes déplacées internes",
+    desc: "Collecte de fonds au profit de femmes déplacées internes au Burkina Faso, avec l'association Vivre au Village (VIVAVI), et organisation de formations pratiques en saponification et en transformation du soja.",
+    tags: ["Collecte de fonds", "Formation", "Impact social"],
     color: "#f4ece8",
     type: "community",
     category: "communautaire",
-    demo: { kind: "photos", photos: [] },
+    demo: { kind: "photos", photos: ["/projets/femmes-deplacees/photo-1.jpg", "/projets/femmes-deplacees/photo-2.jpg", "/projets/femmes-deplacees/photo-3.jpg", "/projets/femmes-deplacees/photo-4.jpg", "/projets/femmes-deplacees/photo-5.jpg", "/projets/femmes-deplacees/photo-6.jpg"] },
   },
   // Projets personnels
   {
