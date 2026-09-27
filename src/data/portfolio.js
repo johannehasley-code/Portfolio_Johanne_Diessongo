@@ -105,7 +105,7 @@ export const projects = [
     color: "#eef0f8",
     type: "security",
     category: "personnel",
-    demo: { kind: "link", url: "", label: "Voir l'application" },
+    demo: { kind: "link", url: "https://claude.ai/artifact/MTca5gqhiubCTdReN3w5oF", label: "Voir l'application" },
   },
   {
     title: "ScholarHub",
