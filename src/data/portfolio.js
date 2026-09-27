@@ -105,7 +105,7 @@ export const projects = [
     color: "#eef0f8",
     type: "security",
     category: "personnel",
-    demo: { kind: "photos", photos: [], placeholder: "Captures d'écran à venir" },
+    demo: { kind: "link", url: "", label: "Voir l'application" },
   },
   {
     title: "Centralisation de Bourses",
