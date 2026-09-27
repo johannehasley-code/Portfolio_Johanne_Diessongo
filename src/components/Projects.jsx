@@ -62,7 +62,7 @@ function ProjectModal({ project, onClose }) {
         ) : (
           <div className="modal-placeholder">
             <IconCamera size={28} color="var(--slate-light)" />
-            <p>Photos à venir</p>
+            <p>{demo.placeholder || "Photos à venir"}</p>
           </div>
         )
       )}

@@ -52,7 +52,7 @@ export const experiences = [
     tasks: [
       "Analyse des statistiques relatives à la récupération des cartes bancaires",
       "Gestion des incidents de transfert Western Union (erreurs réseau, blocages, retards)",
-      "Conception d'une application de gestion de tokens uniques pour sécuriser les transferts d'argent",
+      "Conception de l'interface d'une application de gestion de tokens uniques pour sécuriser les transferts d'argent",
     ],
     extracts: { photos: [] },
   },
@@ -100,12 +100,12 @@ export const projects = [
   },
   {
     title: "App de Gestion de Tokens",
-    desc: "Solution sécurisée de génération de tokens uniques pour les transferts d'argent (BOA Mali).",
-    tags: ["FinTech", "Sécurité", "Banking"],
+    desc: "Conception de l'interface d'une application de génération de tokens uniques pour sécuriser les transferts d'argent, réalisée pendant mon stage chez BOA Mali.",
+    tags: ["FinTech", "UI", "Banking"],
     color: "#eef0f8",
     type: "security",
     category: "personnel",
-    demo: { kind: "link", url: "" },
+    demo: { kind: "photos", photos: [], placeholder: "Captures d'écran à venir" },
   },
   {
     title: "Centralisation de Bourses",
