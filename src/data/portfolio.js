@@ -91,8 +91,8 @@ export const projects = [
   // Projets personnels
   {
     title: "Investpredict",
-    desc: "Application d'épargne inclusive pour agriculteurs et éleveurs du Burkina Faso : sécurisation et croissance progressive de l'épargne, assistance vocale en langues locales.",
-    tags: ["React", "IA", "Finance inclusive", "BRVM"],
+    desc: "Plateforme d'aide à l'investissement sur la BRVM : analyse des titres par IA selon le montant, la durée, le secteur et le profil de risque, suivi de portefeuille et cours des sociétés cotées. Présentée au Prix Jeune Inventeur du Faso 2026.",
+    tags: ["IA", "BRVM", "Finance de marché", "React"],
     color: "#e8f4f0",
     type: "finance",
     category: "personnel",
