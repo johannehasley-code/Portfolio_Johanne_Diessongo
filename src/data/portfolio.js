@@ -137,8 +137,8 @@ export const projects = [
   },
   {
     title: "MathBot AI",
-    desc: "Projet académique. Fiche en cours de complément.",
-    tags: ["IA", "Académique"],
+    desc: "Application de tutorat en mathématiques assistée par IA pour aider les élèves du Burkina Faso à préparer le BEPC.",
+    tags: ["IA", "Éducation", "EdTech"],
     color: "#e8eef4",
     type: "tech",
     category: "academique",
