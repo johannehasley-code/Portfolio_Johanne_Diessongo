@@ -11,18 +11,24 @@ function ProjectIcon({ type, size = 28 }) {
 
 function ProjectCard({ project, index }) {
   const [hovered, setHovered] = useState(false);
+  const hasLink = Boolean(project.link);
+
   return (
     <div
       className="project-card reveal"
-      style={{ animationDelay: `${index * 100}ms`, background: hovered ? "white" : project.color }}
+      style={{ animationDelay: `${index * 100}ms`, background: hovered ? "white" : project.color, cursor: hasLink ? "pointer" : "default" }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={() => { if (hasLink) window.open(project.link, "_blank", "noopener,noreferrer"); }}
+      role={hasLink ? "link" : undefined}
+      tabIndex={hasLink ? 0 : undefined}
+      onKeyDown={(e) => { if (hasLink && (e.key === "Enter" || e.key === " ")) window.open(project.link, "_blank", "noopener,noreferrer"); }}
     >
       <div className="project-icon-wrap">
         <div className="project-icon-circle" style={{ opacity: hovered ? 1 : 0.85 }}>
           <ProjectIcon type={project.type} />
         </div>
-        <div className="project-arrow" style={{ opacity: hovered ? 1 : 0, transform: hovered ? "translate(0,0)" : "translate(-6px, 6px)" }}>
+        <div className="project-arrow" style={{ opacity: hovered || hasLink ? 1 : 0, transform: hovered ? "translate(0,0)" : "translate(-6px, 6px)" }}>
           <IconArrowRight size={20} color="var(--sage-dark)" />
         </div>
       </div>
@@ -31,6 +37,7 @@ function ProjectCard({ project, index }) {
       <div className="project-tags">
         {project.tags.map((t) => <span key={t} className="project-tag">{t}</span>)}
       </div>
+      {hasLink && <div className="project-link-hint">Voir la démo <IconArrowRight size={13} color="var(--sage-dark)" /></div>}
       <div className="project-hover-line" style={{ transform: `scaleX(${hovered ? 1 : 0})` }} />
     </div>
   );
@@ -74,6 +81,7 @@ export default function Projects() {
         .project-tag { background: rgba(255,255,255,0.7); border: 1px solid rgba(58,63,74,0.12); border-radius: 50px; padding: 4px 12px; font-size: 0.72rem; color: var(--slate); font-weight: 500; letter-spacing: 0.04em; transition: all 0.2s ease; }
         .project-card:hover .project-tag { background: white; border-color: var(--sage-light); }
         .project-hover-line { position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--sage), var(--gold)); transform-origin: left; transition: transform 0.4s ease; }
+        .project-link-hint { display: flex; align-items: center; gap: 4px; margin-top: 14px; font-size: 0.76rem; font-weight: 600; color: var(--sage-dark); letter-spacing: 0.02em; }
         @media (max-width: 768px) { .projects { padding: 80px 32px; } .projects-grid { grid-template-columns: 1fr; } }
       `}</style>
 

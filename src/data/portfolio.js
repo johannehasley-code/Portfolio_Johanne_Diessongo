@@ -80,6 +80,7 @@ export const projects = [
     tags: ["FinTech", "Sécurité", "Banking"],
     color: "#eef0f8",
     type: "security",
+    link: "https://claude.ai/artifact/MTca5gqhiubCTdReN3w5oF",
   },
   {
     title: "Centralisation de Bourses",
