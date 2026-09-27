@@ -77,7 +77,7 @@ export const projects = [
     color: "#f4e8ea",
     type: "community",
     category: "communautaire",
-    demo: { kind: "video", url: "" },
+    demo: { kind: "link", url: "", label: "Voir l'application" },
   },
   {
     title: "Aide aux femmes déplacées internes",
@@ -96,7 +96,7 @@ export const projects = [
     color: "#e8f4f0",
     type: "finance",
     category: "personnel",
-    demo: { kind: "video", url: "" },
+    demo: { kind: "link", url: "", label: "Voir l'application" },
   },
   {
     title: "App de Gestion de Tokens",

@@ -83,12 +83,12 @@ function ProjectModal({ project, onClose }) {
       {demo.kind === "link" && (
         demo.url ? (
           <a className="project-modal-link" href={demo.url} target="_blank" rel="noreferrer">
-            Voir la démo <IconExternalLink size={16} />
+            {demo.label || "Voir la démo"} <IconExternalLink size={16} />
           </a>
         ) : (
           <div className="modal-placeholder">
             <IconExternalLink size={28} color="var(--slate-light)" />
-            <p>Lien de démo à venir</p>
+            <p>{demo.label ? "Lien à venir" : "Lien de démo à venir"}</p>
           </div>
         )
       )}
