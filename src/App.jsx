@@ -1,7 +1,6 @@
 import "./styles.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import PhotoSection from "./components/PhotoSection";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
@@ -15,7 +14,6 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <PhotoSection />
         <About />
         <Experience />
         <Projects />

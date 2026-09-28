@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { profile, projects, certifications } from "../data/portfolio";
-import { IconArrowRight, IconMail, IconMapPin } from "./Icons";
+import { IconArrowRight, IconMail } from "./Icons";
+import PhotoCard from "./PhotoSection";
 
 const tickers = [
   "SECCAPI · Modélisation Financière",
@@ -12,52 +13,6 @@ const tickers = [
   "Gestion de Risques",
   "Innovation · Tech · Finance",
 ];
-
-function MiniChart() {
-  const points = [30, 55, 40, 70, 60, 85, 72, 95, 80, 100];
-  const w = 200, h = 80, pad = 10;
-  const xs = points.map((_, i) => pad + (i / (points.length - 1)) * (w - 2 * pad));
-  const ys = points.map((p) => h - pad - (p / 110) * (h - 2 * pad));
-  const path = xs.map((x, i) => `${i === 0 ? "M" : "L"} ${x} ${ys[i]}`).join(" ");
-  const area = `${path} L ${xs[xs.length - 1]} ${h} L ${xs[0]} ${h} Z`;
-  return (
-    <svg viewBox={`0 0 ${w} ${h}`} style={{ width: "100%", height: "100%", overflow: "visible" }}>
-      <defs>
-        <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#8aab96" stopOpacity="0.3" />
-          <stop offset="100%" stopColor="#8aab96" stopOpacity="0" />
-        </linearGradient>
-        <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stopColor="#c9a84c" />
-          <stop offset="100%" stopColor="#5c8a6e" />
-        </linearGradient>
-      </defs>
-      <path d={area} fill="url(#chartGrad)" />
-      <path
-        d={path}
-        fill="none"
-        stroke="url(#lineGrad)"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeDasharray="400"
-        strokeDashoffset="400"
-        style={{
-          animation: "draw 2s ease forwards 0.8s",
-        }}
-      />
-      {xs.map((x, i) => (
-        <circle
-          key={i}
-          cx={x} cy={ys[i]} r="3"
-          fill={i === points.length - 1 ? "#c9a84c" : "#8aab96"}
-          opacity={i === points.length - 1 ? 1 : 0.4}
-          style={{ animation: `fadeIn 0.3s ease forwards ${0.8 + i * 0.12}s`, opacity: 0 }}
-        />
-      ))}
-    </svg>
-  );
-}
 
 function StatCard({ value, label, delay }) {
   const [visible, setVisible] = useState(false);
@@ -247,29 +202,6 @@ export default function Hero() {
           transform: translateY(-4px);
           box-shadow: var(--shadow-lift);
         }
-        .chart-card { padding: 24px 28px 16px; }
-        .chart-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          margin-bottom: 16px;
-        }
-        .chart-title { font-size: 0.8rem; color: var(--slate-light); text-transform: uppercase; letter-spacing: 0.06em; }
-        .chart-val {
-          font-family: 'DM Mono', monospace;
-          font-size: 1.6rem;
-          color: var(--slate);
-          font-weight: 500;
-        }
-        .chart-change {
-          font-size: 0.8rem;
-          color: var(--sage-dark);
-          background: var(--mint);
-          padding: 2px 8px;
-          border-radius: 50px;
-          font-weight: 500;
-        }
-        .chart-area { height: 80px; }
         .stats-row {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
@@ -298,20 +230,6 @@ export default function Hero() {
           margin-bottom: 4px;
         }
         .stat-label { font-size: 0.7rem; color: var(--slate-pale); text-transform: uppercase; letter-spacing: 0.06em; }
-        .location-row {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          font-size: 0.82rem;
-          color: var(--slate-light);
-        }
-        .location-dot {
-          width: 8px; height: 8px;
-          border-radius: 50%;
-          background: var(--sage);
-          animation: pulse-glow 2s infinite;
-          flex-shrink: 0;
-        }
 
         /* Ticker */
         .ticker-wrap {
@@ -380,28 +298,12 @@ export default function Hero() {
           </div>
 
           <div className="hero-right">
-            <div className="hero-card chart-card">
-              <div className="chart-header">
-                <div>
-                  <div className="chart-title">Croissance des compétences</div>
-                  <div className="chart-val">+47.2%</div>
-                </div>
-                <span className="chart-change">▲ 2024–2026</span>
-              </div>
-              <div className="chart-area"><MiniChart /></div>
-            </div>
+            <PhotoCard />
 
             <div className="stats-row">
               <StatCard value="3+" label="Ans d'études" delay={400} />
               <StatCard value={String(projects.length)} label="Projets" delay={550} />
               <StatCard value={String(certifications.length)} label="Certifications" delay={700} />
-            </div>
-
-            <div className="hero-card" style={{ padding: "16px 24px" }}>
-              <div className="location-row">
-                <span className="location-dot" />
-                {profile.location}
-              </div>
             </div>
           </div>
         </div>
