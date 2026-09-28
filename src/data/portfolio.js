@@ -133,7 +133,7 @@ export const projects = [
     color: "#f0e8f4",
     type: "book",
     category: "academique",
-    demo: { kind: "link", url: "" },
+    demo: { kind: "link", url: "https://johannehasley-code.github.io/AES_Collab/", label: "Voir l'application" },
   },
   {
     title: "MathBot AI",
