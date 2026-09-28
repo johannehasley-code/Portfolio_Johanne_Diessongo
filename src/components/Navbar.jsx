@@ -72,6 +72,20 @@ export default function Navbar() {
           background: var(--sage);
           animation: pulse-glow 2.5s infinite;
         }
+        .nav-logo-text {
+          position: relative;
+        }
+        .nav-logo-text::after {
+          content: '';
+          position: absolute;
+          left: -6px;
+          right: -6px;
+          top: 50%;
+          height: 1px;
+          background: var(--sage);
+          transform: translateY(-50%);
+          z-index: -1;
+        }
         .nav-links {
           display: flex;
           gap: 32px;
@@ -176,7 +190,7 @@ export default function Navbar() {
       <nav className={`navbar${scrolled ? " scrolled" : ""}`}>
         <a href="#hero" className="nav-logo">
           <span className="nav-logo-dot"></span>
-          JHD
+          <span className="nav-logo-text">JHD</span>
         </a>
         <ul className="nav-links">
           {navLinks.map((l) => (
