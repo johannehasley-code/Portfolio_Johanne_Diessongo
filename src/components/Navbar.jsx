@@ -80,11 +80,17 @@ export default function Navbar() {
           position: absolute;
           left: -6px;
           right: -6px;
-          top: 50%;
+          top: calc(50% - 0.5px);
           height: 1px;
-          background: var(--sage);
-          transform: translateY(-50%);
+          background: linear-gradient(90deg, var(--gold) 0%, var(--sage-dark) 100%);
+          transform-origin: left center;
+          transform: scaleX(0);
+          animation: logoBarFill 1.4s cubic-bezier(0.65, 0, 0.35, 1) 0.4s forwards;
           z-index: -1;
+        }
+        @keyframes logoBarFill {
+          from { transform: scaleX(0); }
+          to { transform: scaleX(1); }
         }
         .nav-links {
           display: flex;
