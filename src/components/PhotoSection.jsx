@@ -205,7 +205,7 @@ export default function PhotoSection() {
               </h2>
             </div>
             <p className="photo-bio reveal">
-              Basée à Ouagadougou, je vis actuellement mon stage chez SECCAPI sur un mandat
+              Basée à Ouagadougou, j'ai récemment terminé mon stage chez SECCAPI sur un mandat
               du plan de développement stratégique d'une société de transport public,
               tout en développant Laafi Épargne, mon projet dédié à l'inclusion financière
               rurale en Afrique de l'Ouest.
@@ -220,7 +220,7 @@ export default function PhotoSection() {
               ))}
             </div>
             <div className="photo-traits reveal">
-              {["SECCAPI · Stage en cours", "Laafi Épargne · Fondatrice", "Sciences Po · Candidature 2027"].map((t) => (
+              {["SECCAPI · Stage terminé", "Laafi Épargne · Fondatrice", "Sciences Po · Candidature 2027"].map((t) => (
                 <span key={t} className="photo-trait">
                   <span className="trait-dot" />
                   {t}
