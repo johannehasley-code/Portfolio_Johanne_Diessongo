@@ -364,7 +364,7 @@ export default function Hero() {
           <div className="hero-left">
             <div className="hero-eyebrow">
               <span className="eyebrow-dot" />
-              Disponible · École Centrale Casablanca, 4e année
+              Disponible · Ingénierie Généraliste, 4e année
             </div>
             <h1 className="hero-name">
               Johanne<br />
