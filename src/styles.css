@@ -142,3 +142,36 @@ body {
   opacity: 1;
   transform: translateX(0);
 }
+
+/* Shared section heading styles (used across multiple sections) */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sage-dark);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.section-label::before {
+  content: '';
+  width: 32px;
+  height: 1.5px;
+  background: var(--sage);
+  display: block;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 300;
+  color: var(--slate);
+  line-height: 1.1;
+  margin-bottom: 60px;
+  letter-spacing: -0.01em;
+}
+.section-title em {
+  font-style: italic;
+  color: var(--sage-dark);
+}
