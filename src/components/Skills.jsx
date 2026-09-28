@@ -12,8 +12,9 @@ function SkillChip({ name, context }) {
 }
 
 function CertCard({ cert, index }) {
-  return (
-    <div className="cert-card reveal" style={{ animationDelay: `${index * 100}ms` }}>
+  const clickable = Boolean(cert.url);
+  const content = (
+    <>
       <div className="cert-icon-wrap">
         <IconAward size={22} color="var(--slate)" />
       </div>
@@ -25,6 +26,26 @@ function CertCard({ cert, index }) {
       <div className="cert-check">
         <IconCheck size={11} color="white" /> Certifié
       </div>
+    </>
+  );
+
+  if (clickable) {
+    return (
+      <a
+        href={cert.url}
+        target="_blank"
+        rel="noreferrer"
+        className="cert-card cert-card-link reveal"
+        style={{ animationDelay: `${index * 100}ms` }}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <div className="cert-card reveal" style={{ animationDelay: `${index * 100}ms` }}>
+      {content}
     </div>
   );
 }
@@ -59,8 +80,10 @@ export default function Skills() {
         .management-pill:hover { background: var(--gold-light); transform: translateY(-3px); box-shadow: var(--shadow-gold); }
         .certs-section { margin-top: 80px; padding-top: 60px; border-top: 1px solid var(--sand); }
         .certs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 32px; }
-        .cert-card { background: var(--warm-white); border-radius: var(--radius-md); padding: 24px; border: 1px solid var(--sand); transition: all 0.4s ease; cursor: default; position: relative; overflow: hidden; }
+        .cert-card { background: var(--warm-white); border-radius: var(--radius-md); padding: 24px; border: 1px solid var(--sand); transition: all 0.4s ease; cursor: default; position: relative; overflow: hidden; display: block; text-decoration: none; color: inherit; }
         .cert-card:hover { border-color: var(--sage-light); transform: translateY(-6px); box-shadow: var(--shadow-soft); }
+        .cert-card-link { cursor: pointer; }
+        .cert-card-link:hover { border-color: var(--sage-dark); }
         .cert-icon-wrap { width: 44px; height: 44px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; background: var(--mint); transition: transform 0.3s ease; }
         .cert-card:hover .cert-icon-wrap { transform: scale(1.1) rotate(5deg); }
         .cert-title { font-size: 0.85rem; font-weight: 600; color: var(--slate); line-height: 1.4; margin-bottom: 8px; }
