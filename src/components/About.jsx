@@ -23,7 +23,7 @@ export default function About() {
   }, []);
 
   const infoCards = [
-    { icon: <IconMapPin size={22} color="var(--sage-dark)" />, label: "Localisation", value: "Ouagadougou, Burkina Faso", sub: "Mobilité académique – 2026", bg: "var(--mint)" },
+    { icon: <IconMapPin size={22} color="var(--sage-dark)" />, label: "Localisation", value: "Casablanca, Maroc", sub: null, bg: "var(--mint)" },
     { icon: <IconGraduate size={22} color="#7a6ab8" />, label: "Formation", value: "Bachelor of Engineering", sub: "École Centrale Casablanca", bg: "var(--lavender)" },
     { icon: <IconGlobe size={22} color="#3a6a8a" />, label: "Langues", value: null, sub: null, bg: "var(--sky-light)", isLanguages: true },
     { icon: <IconMail size={22} color="var(--gold)" />, label: "Email", value: profile.email, sub: null, bg: "var(--gold-pale)" },
@@ -70,8 +70,8 @@ export default function About() {
         </div>
         <div className="about-grid">
           <div>
-            <p className="about-text reveal">Ce qui m'anime, c'est de rendre la finance de marchés plus accessible, en particulier pour l'Afrique de l'Ouest. Chaque projet que je mène part d'un besoin concret — que ce soit l'analyse financière d'une entreprise cliente ou la conception d'un outil d'épargne pour des populations aujourd'hui exclues du système financier.</p>
-            <div className="about-highlight reveal"><p>"Mon ambition : construire à l'intersection de la technologie et de la finance pour créer des solutions qui transforment l'Afrique."</p></div>
+            <p className="about-text reveal">Ce qui m'anime, c'est de rendre la finance de marchés plus accessible, en particulier pour l'Afrique de l'Ouest. Chaque projet que je mène part d'un besoin concret, que ce soit l'analyse financière d'une entreprise cliente ou la conception d'Investpredict, une plateforme qui démocratise l'accès à l'analyse des marchés financiers ouest-africains.</p>
+            <div className="about-highlight reveal"><p>"Je veux utiliser la technologie pour rendre les marchés financiers ouest-africains plus accessibles et plus faciles à comprendre."</p></div>
             <div className="reveal">
               <div className="qualities-title">Qualités</div>
               <div className="qualities-list">{qualities.map((q) => <span key={q} className="quality-tag">{q}</span>)}</div>

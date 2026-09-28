@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react";
-import { profile } from "../data/portfolio";
+import { profile, projects, certifications } from "../data/portfolio";
 import { IconArrowRight, IconMail, IconMapPin } from "./Icons";
 
 const tickers = [
   "SECCAPI · Modélisation Financière",
   "École Centrale Casablanca",
-  "Laafi Épargne · Fondatrice",
+  "Investpredict · Co-fondatrice",
   "FinTech · Finance de Marchés",
-  "Ouagadougou · Burkina Faso",
+  "Casablanca · Maroc",
   "BRVM / UEMOA",
   "Gestion de Risques",
   "Innovation · Tech · Finance",
@@ -364,7 +364,7 @@ export default function Hero() {
           <div className="hero-left">
             <div className="hero-eyebrow">
               <span className="eyebrow-dot" />
-              Disponible · Étudiante en mobilité 2026
+              Disponible · Ingénierie Généraliste, 4e année
             </div>
             <h1 className="hero-name">
               Johanne<br />
@@ -393,14 +393,14 @@ export default function Hero() {
 
             <div className="stats-row">
               <StatCard value="3+" label="Ans d'études" delay={400} />
-              <StatCard value="4" label="Projets" delay={550} />
-              <StatCard value="4" label="Certifications" delay={700} />
+              <StatCard value={String(projects.length)} label="Projets" delay={550} />
+              <StatCard value={String(certifications.length)} label="Certifications" delay={700} />
             </div>
 
             <div className="hero-card" style={{ padding: "16px 24px" }}>
               <div className="location-row">
                 <span className="location-dot" />
-                {profile.location} · École Centrale Casablanca
+                {profile.location}
               </div>
             </div>
           </div>
