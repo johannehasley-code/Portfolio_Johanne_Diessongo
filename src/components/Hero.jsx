@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { profile } from "../data/portfolio";
+import { profile, projects, certifications } from "../data/portfolio";
 import { IconArrowRight, IconMail, IconMapPin } from "./Icons";
 
 const tickers = [
@@ -393,8 +393,8 @@ export default function Hero() {
 
             <div className="stats-row">
               <StatCard value="3+" label="Ans d'études" delay={400} />
-              <StatCard value="4" label="Projets" delay={550} />
-              <StatCard value="4" label="Certifications" delay={700} />
+              <StatCard value={String(projects.length)} label="Projets" delay={550} />
+              <StatCard value={String(certifications.length)} label="Certifications" delay={700} />
             </div>
 
             <div className="hero-card" style={{ padding: "16px 24px" }}>
