@@ -71,7 +71,7 @@ export default function About() {
         <div className="about-grid">
           <div>
             <p className="about-text reveal">Ce qui m'anime, c'est de rendre la finance de marchés plus accessible, en particulier pour l'Afrique de l'Ouest. Chaque projet que je mène part d'un besoin concret, que ce soit l'analyse financière d'une entreprise cliente ou la conception d'Investpredict, une plateforme qui démocratise l'accès à l'analyse des marchés financiers ouest-africains.</p>
-            <div className="about-highlight reveal"><p>"Mon ambition : construire à l'intersection de la technologie et de la finance pour créer des solutions qui transforment l'Afrique."</p></div>
+            <div className="about-highlight reveal"><p>"Je veux utiliser la technologie pour rendre les marchés financiers ouest-africains plus accessibles et plus faciles à comprendre."</p></div>
             <div className="reveal">
               <div className="qualities-title">Qualités</div>
               <div className="qualities-list">{qualities.map((q) => <span key={q} className="quality-tag">{q}</span>)}</div>
