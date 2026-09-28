@@ -5,7 +5,7 @@ import { IconArrowRight, IconMail, IconMapPin } from "./Icons";
 const tickers = [
   "SECCAPI · Modélisation Financière",
   "École Centrale Casablanca",
-  "Laafi Épargne · Fondatrice",
+  "Investpredict · Co-fondatrice",
   "FinTech · Finance de Marchés",
   "Casablanca · Maroc",
   "BRVM / UEMOA",

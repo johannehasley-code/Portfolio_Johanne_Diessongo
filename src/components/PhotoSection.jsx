@@ -6,7 +6,7 @@ const PHOTO = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBA
 const stats = [
   { icon: <IconTrendingUp size={18} color="var(--sage-dark)" />, value: "6", label: "Exercices analysés (SECCAPI)" },
   { icon: <IconBarChart size={18} color="var(--gold)" />, value: "2", label: "Stages en finance" },
-  { icon: <IconAward size={18} color="#7a6ab8" />, value: "1", label: "Projet fondé (Laafi Épargne)" },
+  { icon: <IconAward size={18} color="#7a6ab8" />, value: "1", label: "Projet fondé (Investpredict)" },
 ];
 
 export default function PhotoSection() {
@@ -207,8 +207,8 @@ export default function PhotoSection() {
             <p className="photo-bio reveal">
               Basée à Casablanca, j'ai récemment terminé mon stage chez SECCAPI sur un mandat
               du plan de développement stratégique d'une société de transport public,
-              tout en développant Laafi Épargne, mon projet dédié à l'inclusion financière
-              rurale en Afrique de l'Ouest.
+              tout en développant Investpredict, ma plateforme d'aide à l'investissement
+              sur la BRVM propulsée par l'IA.
             </p>
             <div className="photo-stats">
               {stats.map((s, i) => (

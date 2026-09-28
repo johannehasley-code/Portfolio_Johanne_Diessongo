@@ -6,7 +6,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/johannehasleydiessongo",
   location: "Casablanca, Maroc",
   summary: "Étudiante en 4e année en ingénierie généraliste à l'École Centrale Casablanca. Je construis des ponts entre la technologie et la finance de marchés, avec un intérêt particulier pour les marchés financiers ouest-africains (BRVM/UEMOA).",
-  currentFocus: "Fondatrice de Laafi Épargne",
+  currentFocus: "Co-fondatrice d'Investpredict",
 };
 
 export const skills = {
