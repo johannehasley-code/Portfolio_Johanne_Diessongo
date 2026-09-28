@@ -72,26 +72,6 @@ export default function Navbar() {
           background: var(--sage);
           animation: pulse-glow 2.5s infinite;
         }
-        .nav-logo-text {
-          position: relative;
-        }
-        .nav-logo-text::after {
-          content: '';
-          position: absolute;
-          left: -6px;
-          right: -6px;
-          top: calc(50% - 0.5px);
-          height: 1px;
-          background: linear-gradient(90deg, var(--gold) 0%, var(--sage-dark) 100%);
-          transform-origin: left center;
-          transform: scaleX(0);
-          animation: logoBarFill 1.4s cubic-bezier(0.65, 0, 0.35, 1) 0.4s forwards;
-          z-index: -1;
-        }
-        @keyframes logoBarFill {
-          from { transform: scaleX(0); }
-          to { transform: scaleX(1); }
-        }
         .nav-links {
           display: flex;
           gap: 32px;
@@ -196,7 +176,7 @@ export default function Navbar() {
       <nav className={`navbar${scrolled ? " scrolled" : ""}`}>
         <a href="#hero" className="nav-logo">
           <span className="nav-logo-dot"></span>
-          <span className="nav-logo-text">JHD</span>
+          JHD
         </a>
         <ul className="nav-links">
           {navLinks.map((l) => (
