@@ -4,8 +4,8 @@ export const profile = {
   email: "johannehasley.diessongo@gmail.com",
   phone: "+212 618448926",
   linkedin: "https://www.linkedin.com/in/johannehasleydiessongo",
-  location: "Ouagadougou, Burkina Faso",
-  summary: "Étudiante en 4e année en ingénierie généraliste à l'École Centrale Casablanca, en mobilité académique au Burkina Faso. Je construis des ponts entre la technologie et la finance de marchés, avec un intérêt particulier pour les marchés financiers ouest-africains (BRVM/UEMOA).",
+  location: "Casablanca, Maroc",
+  summary: "Étudiante en 4e année en ingénierie généraliste à l'École Centrale Casablanca. Je construis des ponts entre la technologie et la finance de marchés, avec un intérêt particulier pour les marchés financiers ouest-africains (BRVM/UEMOA).",
   currentFocus: "Fondatrice de Laafi Épargne",
 };
 

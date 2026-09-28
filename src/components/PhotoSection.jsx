@@ -191,7 +191,7 @@ export default function PhotoSection() {
             </div>
             <div className="photo-loc-badge">
               <IconMapPin size={13} color="var(--sage-light)" />
-              Ouagadougou, BF
+              Casablanca, Maroc
             </div>
           </div>
 
@@ -205,7 +205,7 @@ export default function PhotoSection() {
               </h2>
             </div>
             <p className="photo-bio reveal">
-              Basée à Ouagadougou, j'ai récemment terminé mon stage chez SECCAPI sur un mandat
+              Basée à Casablanca, j'ai récemment terminé mon stage chez SECCAPI sur un mandat
               du plan de développement stratégique d'une société de transport public,
               tout en développant Laafi Épargne, mon projet dédié à l'inclusion financière
               rurale en Afrique de l'Ouest.
@@ -220,7 +220,7 @@ export default function PhotoSection() {
               ))}
             </div>
             <div className="photo-traits reveal">
-              {["SECCAPI · Stage terminé", "Laafi Épargne · Fondatrice", "Sciences Po · Candidature 2027"].map((t) => (
+              {["Disponible pour un stage · Mars 2027", "Sciences Po · Candidature 2027"].map((t) => (
                 <span key={t} className="photo-trait">
                   <span className="trait-dot" />
                   {t}

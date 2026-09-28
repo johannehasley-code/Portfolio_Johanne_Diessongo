@@ -7,7 +7,7 @@ const tickers = [
   "École Centrale Casablanca",
   "Laafi Épargne · Fondatrice",
   "FinTech · Finance de Marchés",
-  "Ouagadougou · Burkina Faso",
+  "Casablanca · Maroc",
   "BRVM / UEMOA",
   "Gestion de Risques",
   "Innovation · Tech · Finance",
@@ -364,7 +364,7 @@ export default function Hero() {
           <div className="hero-left">
             <div className="hero-eyebrow">
               <span className="eyebrow-dot" />
-              Disponible · Étudiante en mobilité 2026
+              Disponible · École Centrale Casablanca, 4e année
             </div>
             <h1 className="hero-name">
               Johanne<br />
@@ -400,7 +400,7 @@ export default function Hero() {
             <div className="hero-card" style={{ padding: "16px 24px" }}>
               <div className="location-row">
                 <span className="location-dot" />
-                {profile.location} · École Centrale Casablanca
+                {profile.location}
               </div>
             </div>
           </div>
