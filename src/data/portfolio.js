@@ -1,12 +1,12 @@
 export const profile = {
   name: "Johanne Hasley Diessongo",
-  title: "Ingénieure Généraliste · Conseil, Stratégie & Finance",
+  title: "Ingénieure Généraliste · Conseil, Stratégie & Investment Banking",
   email: "johannehasley.diessongo@gmail.com",
   phone: "+212 618448926",
   linkedin: "https://www.linkedin.com/in/johannehasleydiessongo",
   location: "Casablanca, Maroc",
-  summary: "Étudiante en 4e année d'ingénierie généraliste à l'École Centrale Casablanca. Je m'intéresse à la façon dont les entreprises prennent leurs décisions de croissance et de financement, en particulier en Afrique de l'Ouest. Je me prépare à travailler en conseil en stratégie et en conseil financier.",
-  currentFocus: "Co-fondatrice d'Investpredict",
+  summary: "Étudiante en 4e année d'ingénierie généraliste à l'École Centrale Casablanca. Je m'intéresse à la façon dont les entreprises prennent leurs décisions de croissance et de financement, en particulier en Afrique de l'Ouest. Les métiers qui m'attirent : le conseil en stratégie et l'investment banking.",
+  currentFocus: "Fondatrice d'Investpredict",
 };
 
 export const skills = {

@@ -93,7 +93,7 @@ export default function Contact() {
       </section>
 
       <div className="footer-bar">
-        © 2026 Johanne Hasley Diessongo · Ingénieure · FinTech · Finance de Marchés
+        © 2026 Johanne Hasley Diessongo · Ingénieure · Conseil · Stratégie · Investment Banking
       </div>
     </>
   );

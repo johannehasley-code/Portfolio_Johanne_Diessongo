@@ -6,12 +6,12 @@ import PhotoCard from "./PhotoSection";
 const tickers = [
   "SECCAPI · Modélisation Financière",
   "École Centrale Casablanca",
-  "Investpredict · Co-fondatrice",
-  "FinTech · Finance de Marchés",
+  "Investpredict · Fondatrice",
+  "Conseil · Stratégie",
   "Casablanca · Maroc",
   "BRVM / UEMOA",
   "Gestion de Risques",
-  "Innovation · Tech · Finance",
+  "Investment Banking",
 ];
 
 function StatCard({ value, label, delay }) {
