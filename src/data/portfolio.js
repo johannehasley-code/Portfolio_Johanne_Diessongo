@@ -83,7 +83,7 @@ export const projects = [
     color: "#f4ece8",
     type: "community",
     category: "communautaire",
-    demo: { kind: "photos", photos: ["/projets/femmes-deplacees/photo-1.jpg", "/projets/femmes-deplacees/photo-2.jpg", "/projets/femmes-deplacees/photo-3.jpg", "/projets/femmes-deplacees/photo-4.jpg", "/projets/femmes-deplacees/photo-5.jpg", "/projets/femmes-deplacees/photo-6.jpg"] },
+    demo: { kind: "photos", photos: ["/projets/femmes-deplacees/photo-1.jpg", "/projets/femmes-deplacees/photo-2.jpg", "/projets/femmes-deplacees/photo-3.jpg", "/projets/femmes-deplacees/photo-4.jpg", "/projets/femmes-deplacees/photo-5.jpg", "/projets/femmes-deplacees/photo-6.jpg", "/projets/femmes-deplacees/photo-7.jpg", "/projets/femmes-deplacees/photo-8.jpg", "/projets/femmes-deplacees/photo-9.jpg"] },
   },
   // Projets personnels
   {
