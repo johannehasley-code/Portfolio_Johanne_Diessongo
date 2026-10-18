@@ -116,6 +116,14 @@ export const projects = [
   },
   // Projets académiques
   {
+    title: "Big Data pour l'aide à la décision d'investissement",
+    desc: "Projet académique en groupe (module Hadoop, 2iE) : conception d'un pipeline de traitement de données massives avec Hadoop, pour éclairer des choix d'investissement.",
+    tags: ["Hadoop", "Big Data", "Investissement", "Projet de groupe"],
+    color: "#eef4e8",
+    type: "finance",
+    category: "academique",
+  },
+  {
     title: "InnoFaso NC",
     desc: "Application web de gestion des non-conformités développée en collaboration avec Innofaso, entreprise agro-industrielle burkinabè. Analyse des causes par la méthode des 5 Pourquoi assistée par IA, gestion des accès par rôle.",
     tags: ["React", "Node.js", "MySQL", "IA"],
