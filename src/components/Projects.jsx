@@ -56,7 +56,7 @@ function ProjectModal({ project, onClose }) {
 
       {demo.kind === "photos" && (
         demo.photos && demo.photos.length > 0 ? (
-          <div className="project-modal-photos">
+          <div className={`project-modal-photos${demo.slides ? " slides" : ""}`}>
             {demo.photos.map((src) => <img key={src} src={src} alt={project.title} />)}
           </div>
         ) : (
@@ -143,6 +143,8 @@ export default function Projects() {
         .project-modal-desc { font-size: 0.92rem; color: var(--slate-light); line-height: 1.7; margin-bottom: 24px; }
         .project-modal-photos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
         .project-modal-photos img { width: 100%; aspect-ratio: 4 / 3; border-radius: var(--radius-md); object-fit: cover; }
+        .project-modal-photos.slides { grid-template-columns: 1fr; }
+        .project-modal-photos.slides img { aspect-ratio: auto; object-fit: contain; border: 1px solid var(--sand); background: white; }
         .project-modal-video { position: relative; padding-top: 56.25%; border-radius: var(--radius-md); overflow: hidden; }
         .project-modal-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
         .project-modal-link { display: inline-flex; align-items: center; gap: 8px; background: var(--sage-dark); color: white; padding: 12px 24px; border-radius: 50px; font-weight: 500; text-decoration: none; }

@@ -117,11 +117,12 @@ export const projects = [
   // Projets académiques
   {
     title: "Big Data pour l'aide à la décision d'investissement",
-    desc: "Projet académique en groupe (module Hadoop, 2iE) : conception d'un pipeline de traitement de données massives avec Hadoop, pour éclairer des choix d'investissement.",
+    desc: "Projet académique en groupe (module Hadoop, 2iE) : conception d'un pipeline de traitement de données massives avec Hadoop, appliqué à plus de 600 000 lignes de cours boursiers issus de Yahoo Finance. Analyse du rendement, de la volatilité et des dividendes des entreprises pour éclairer le compromis entre rentabilité et risque.",
     tags: ["Hadoop", "Big Data", "Investissement", "Projet de groupe"],
     color: "#eef4e8",
     type: "finance",
     category: "academique",
+    demo: { kind: "photos", slides: true, photos: ["/projets/hadoop/slide-1.jpg", "/projets/hadoop/slide-2.jpg", "/projets/hadoop/slide-3.jpg"] },
   },
   {
     title: "InnoFaso NC",
