@@ -86,7 +86,7 @@ export default function About() {
                   {card.isLanguages ? (
                     <div className="languages-row">
                       <div className="lang-header"><span className="lang-name">Français</span><span className="lang-level">C1</span></div>
-                      <div className="lang-header"><span className="lang-name">Anglais</span><span className="lang-level">B2</span></div>
+                      <div className="lang-header"><span className="lang-name">Anglais</span><span className="lang-level">C1</span></div>
                     </div>
                   ) : (
                     <><div className="info-card-value" style={{ fontSize: card.label === "Email" ? "0.82rem" : undefined }}>{card.value}</div>{card.sub && <div className="info-card-sub">{card.sub}</div>}</>

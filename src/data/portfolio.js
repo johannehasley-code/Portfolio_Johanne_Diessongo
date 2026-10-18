@@ -26,7 +26,7 @@ export const skills = {
   management: ["Méthodes Agile (Scrum)", "Product Backlog", "Leadership", "Gestion de projet"],
   languages: [
     { lang: "Français", level: "C1" },
-    { lang: "Anglais", level: "B2" },
+    { lang: "Anglais", level: "C1" },
   ],
 };
 
