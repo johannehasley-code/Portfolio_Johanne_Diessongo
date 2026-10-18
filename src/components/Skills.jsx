@@ -104,18 +104,18 @@ export default function Skills() {
         <div className="skills-layout">
           <div className="reveal">
             <div className="skills-col-header">
-              <div className="skills-col-icon" style={{ background: "var(--sky-light)" }}><IconCode size={18} color="#3a6a8a" /></div>
-              <span className="skills-col-label">Compétences Techniques</span>
+              <div className="skills-col-icon" style={{ background: "var(--gold-pale)" }}><IconBarChart size={18} color="var(--gold)" /></div>
+              <span className="skills-col-label">Finance & Stratégie</span>
             </div>
-            {skills.tech.map((s) => <SkillChip key={s.name} name={s.name} context={s.context} />)}
+            {skills.finance.map((s) => <SkillChip key={s.name} name={s.name} context={s.context} />)}
           </div>
           <div>
             <div className="reveal">
               <div className="skills-col-header">
-                <div className="skills-col-icon" style={{ background: "var(--gold-pale)" }}><IconBarChart size={18} color="var(--gold)" /></div>
-                <span className="skills-col-label">Compétences Financières</span>
+                <div className="skills-col-icon" style={{ background: "var(--sky-light)" }}><IconCode size={18} color="#3a6a8a" /></div>
+                <span className="skills-col-label">Compétences Techniques</span>
               </div>
-              {skills.finance.map((s) => <SkillChip key={s.name} name={s.name} context={s.context} />)}
+              {skills.tech.map((s) => <SkillChip key={s.name} name={s.name} context={s.context} />)}
             </div>
             <div className="reveal" style={{ marginTop: 40 }}>
               <div className="skills-col-header">

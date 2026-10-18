@@ -12,6 +12,7 @@ export const profile = {
 export const skills = {
   finance: [
     { name: "Diagnostic financier", context: "Analyse sur 5 exercices, normes SYSCOHADA" },
+    { name: "Stratégie d'entreprise", context: "Plan stratégique d'une société de transport public" },
     { name: "Analyse de données", context: "Excel avancé + Python" },
     { name: "Analyse par ratios", context: "Rentabilité, structure, trésorerie" },
     { name: "Analyse de marché", context: "Focus BRVM/UEMOA" },
@@ -144,8 +145,8 @@ export const projects = [
 ];
 
 export const projectCategories = [
-  { key: "communautaire", label: "Projets communautaires" },
   { key: "personnel", label: "Projets personnels" },
+  { key: "communautaire", label: "Projets communautaires" },
   { key: "academique", label: "Projets académiques" },
 ];
 

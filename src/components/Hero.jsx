@@ -298,6 +298,7 @@ export default function Hero() {
             <p className="hero-desc">{profile.summary}</p>
             <div className="hero-actions">
               <a href="#projects" className="btn-primary">Voir mes projets <IconArrowRight size={16} color="white" /></a>
+              <a href="/cv/Johanne_DIESSONGO_CV.pdf" download="Johanne_DIESSONGO_CV.pdf" className="btn-secondary">Télécharger mon CV</a>
               <a href="#contact" className="btn-secondary"><IconMail size={16} color="currentColor" /> Me contacter</a>
             </div>
           </div>
