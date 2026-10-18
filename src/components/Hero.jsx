@@ -7,11 +7,13 @@ const tickers = [
   "SECCAPI · Modélisation Financière",
   "École Centrale Casablanca",
   "Investpredict · Fondatrice",
+  "FinTech · Finance de Marchés",
   "Conseil · Stratégie",
   "Casablanca · Maroc",
   "BRVM / UEMOA",
   "Gestion de Risques",
   "Investment Banking",
+  "Innovation · Tech · Finance",
 ];
 
 function StatCard({ value, label, delay }) {
