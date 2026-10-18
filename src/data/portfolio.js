@@ -169,10 +169,9 @@ export const education = [
 
 export const certifications = [
   { title: "Modélisation financière et prévisions", org: "edX", year: "2024", url: "https://coursera.org/share/37d9313a2bcef443b9d522c4200a9b25" },
-  { title: "Data Forecasting", org: "LinkedIn Learning", year: "2024" },
-  { title: "Introduction à la Finance", org: "Coursera", year: "2024" },
   { title: "Gestion de projet", org: "MOOC", year: "2023", url: "/certifications/gestion-de-projet-mooc.pdf" },
   { title: "Agile Project Management", org: "Coursera", year: "2024", url: "https://coursera.org/share/8868c1680ee8e855e4f02d718ef2385d" },
+  { title: "Financial Markets", org: "Yale University (Coursera)", year: "En cours", inProgress: true },
 ];
 
 export const qualities = ["Esprit d'équipe", "Leadership", "Rigueur analytique", "Adaptabilité", "Communication"];

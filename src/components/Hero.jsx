@@ -306,7 +306,7 @@ export default function Hero() {
             <div className="stats-row">
               <StatCard value="3+" label="Ans d'études" delay={400} />
               <StatCard value={String(projects.length)} label="Projets" delay={550} />
-              <StatCard value={String(certifications.length)} label="Certifications" delay={700} />
+              <StatCard value={String(certifications.filter((c) => !c.inProgress).length)} label="Certifications" delay={700} />
             </div>
           </div>
         </div>
