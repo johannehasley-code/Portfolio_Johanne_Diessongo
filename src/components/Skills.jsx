@@ -24,7 +24,7 @@ function CertCard({ cert, index }) {
         <span className="cert-year">{cert.year}</span>
       </div>
       <div className="cert-check">
-        <IconCheck size={11} color="white" /> Certifié
+        {cert.inProgress ? "En cours" : <><IconCheck size={11} color="white" /> Certifié</>}
       </div>
     </>
   );
