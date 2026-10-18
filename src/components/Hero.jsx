@@ -81,7 +81,7 @@ export default function Hero() {
         }
         .hero-grid {
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: 1.4fr 1fr;
           gap: 60px;
           align-items: center;
           flex: 1;
@@ -113,9 +113,10 @@ export default function Hero() {
         }
         .hero-name {
           font-family: 'Cormorant Garamond', serif;
-          font-size: clamp(3rem, 5vw, 5.5rem);
+          font-size: clamp(2.2rem, 3.6vw, 4.2rem);
           font-weight: 300;
           line-height: 1.05;
+          white-space: nowrap;
           color: var(--slate);
           margin-bottom: 16px;
           letter-spacing: -0.02em;
@@ -185,6 +186,9 @@ export default function Hero() {
           transform: translateY(-2px);
         }
         .hero-right {
+          width: 100%;
+          max-width: 400px;
+          justify-self: center;
           animation: slideRight 0.9s ease forwards;
           display: flex;
           flex-direction: column;
@@ -263,6 +267,7 @@ export default function Hero() {
           flex-shrink: 0;
         }
         @media (max-width: 900px) {
+          .hero-name { white-space: normal; }
           .hero-grid {
             grid-template-columns: 1fr;
             padding: 120px 32px 60px;
@@ -285,9 +290,7 @@ export default function Hero() {
               Disponible · Ingénierie Généraliste, 4e année
             </div>
             <h1 className="hero-name">
-              Johanne<br />
-              <em>Hasley</em><br />
-              Diessongo
+              Johanne <em>Hasley</em> DIESSONGO
             </h1>
             <p className="hero-title">Ingénieure Généraliste · FinTech & Finance de Marchés</p>
             <p className="hero-desc">{profile.summary}</p>
