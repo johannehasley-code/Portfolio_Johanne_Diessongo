@@ -12,7 +12,6 @@ export const profile = {
 export const skills = {
   finance: [
     { name: "Diagnostic financier", context: "Analyse sur 5 exercices, normes SYSCOHADA" },
-    { name: "Forecasting", context: "Certification edX, 2024" },
     { name: "Analyse de données", context: "Excel avancé + Python" },
     { name: "Analyse par ratios", context: "Rentabilité, structure, trésorerie" },
     { name: "Analyse de marché", context: "Focus BRVM/UEMOA" },
