@@ -78,7 +78,7 @@ export const projects = [
   },
   {
     title: "Give Back Activities – Femmes déplacées internes",
-    desc: "Collecte de fonds au profit de femmes déplacées internes au Burkina Faso, avec l'association Vivre au Village (VIVAVI), et organisation de formations pratiques en saponification et en transformation du soja.",
+    desc: "Collecte de fonds au profit de femmes déplacées internes au Burkina Faso, avec l'association Vivre au Village (VIVAVI), et organisation de formations pratiques en saponification et en transformation du soja. Une kermesse avec des activités sportives a été organisée pour mobiliser la population autour de la collecte.",
     tags: ["Collecte de fonds", "Formation", "Impact social"],
     color: "#f4ece8",
     type: "community",
