@@ -70,8 +70,9 @@ export default function About() {
         </div>
         <div className="about-grid">
           <div>
-            <p className="about-text reveal">Étudiante en 4e année à l'École Centrale Casablanca et boursière de la Mastercard Foundation. Mes stages chez Bank Of Africa Mali et chez SECCAPI m'ont rapprochée de la finance d'entreprise : analyse de données, diagnostic financier, plan stratégique.</p>
-            <p className="about-text reveal">Ce qui m'anime : comprendre une entreprise par ses chiffres et l'aider à mieux grandir. C'est ce qui m'oriente vers le conseil en stratégie et l'investment banking.</p>
+            <p className="about-text reveal">Je suis en 4e année d'ingénierie généraliste à l'École Centrale Casablanca et boursière de la Mastercard Foundation. De janvier à juillet 2026, j'ai suivi un semestre d'échange à 2iE, au Burkina Faso. Ma formation d'ingénieure m'a appris à poser un problème, à chercher les bons chiffres et à défendre une recommandation.</p>
+            <p className="about-text reveal">Mes stages m'ont rapprochée de la finance d'entreprise. Chez Bank Of Africa au Mali, j'ai analysé des données sur le retrait des cartes bancaires pour aider la direction à prendre ses décisions. Chez SECCAPI, un cabinet d'expertise comptable, j'ai réalisé le diagnostic financier d'une société pharmaceutique et contribué au plan stratégique d'une société de transport public.</p>
+            <p className="about-text reveal">Ce qui m'anime, c'est de comprendre une entreprise à travers ses chiffres, puis de l'aider à choisir comment grandir et se financer. C'est pour cela que je m'oriente vers le conseil en stratégie et l'investment banking. En parallèle, j'ai fondé Investpredict, une plateforme qui rend l'analyse des marchés financiers ouest-africains accessible au plus grand nombre.</p>
             <div className="about-highlight reveal"><p>"Je veux aider à faire grandir les entreprises d'Afrique de l'Ouest et rendre les marchés financiers accessibles à tous, en combinant analyse financière et outils technologiques."</p></div>
             <div className="reveal">
               <div className="qualities-title">Qualités</div>
