@@ -292,7 +292,7 @@ export default function Hero() {
             <h1 className="hero-name">
               Johanne <em>Hasley</em> DIESSONGO
             </h1>
-            <p className="hero-title">Ingénieure Généraliste · FinTech & Finance de Marchés</p>
+            <p className="hero-title">{profile.title}</p>
             <p className="hero-desc">{profile.summary}</p>
             <div className="hero-actions">
               <a href="#projects" className="btn-primary">Voir mes projets <IconArrowRight size={16} color="white" /></a>

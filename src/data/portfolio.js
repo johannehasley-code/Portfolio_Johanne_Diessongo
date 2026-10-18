@@ -1,11 +1,11 @@
 export const profile = {
   name: "Johanne Hasley Diessongo",
-  title: "Ingénieure Généraliste · FinTech & Finance de Marchés",
+  title: "Ingénieure Généraliste · Conseil, Stratégie & Finance",
   email: "johannehasley.diessongo@gmail.com",
   phone: "+212 618448926",
   linkedin: "https://www.linkedin.com/in/johannehasleydiessongo",
   location: "Casablanca, Maroc",
-  summary: "Étudiante en 4e année en ingénierie généraliste à l'École Centrale Casablanca. Je construis des ponts entre la technologie et la finance de marchés, avec un intérêt particulier pour les marchés financiers ouest-africains (BRVM/UEMOA).",
+  summary: "Étudiante en 4e année d'ingénierie généraliste à l'École Centrale Casablanca. Je m'intéresse à la façon dont les entreprises prennent leurs décisions de croissance et de financement, en particulier en Afrique de l'Ouest. Je me prépare à travailler en conseil en stratégie et en conseil financier.",
   currentFocus: "Co-fondatrice d'Investpredict",
 };
 
